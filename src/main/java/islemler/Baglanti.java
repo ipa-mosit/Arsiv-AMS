@@ -5,7 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import modeller.HalfCabinet;
+// import modeller.HalfCabinet;
 
 import org.hibernate.boot.MetadataSources;
 // import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -27,7 +27,7 @@ public class Baglanti{
     public void ac(){
         this.oturum=oturumUretici.openSession();
         this.islem=oturum.beginTransaction();
-        System.out.println("Oturum Açıldı, İşlem Başladı");
+        System.out.println("Oturum Açıldı, İşlem Başladı\n");
     }
     public void kaydet(Object obj){
         // System.out.println(obj.getLocations().get(0).getFiles().get(0).getName());

@@ -2,9 +2,20 @@ package ana;
 
 
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
 import arayuzler.Shell;
+import arayuzler.TextIoUiApp;
+
+import java.util.function.BiConsumer;
+// import java.util.function.BiConsumer.*;
+import org.beryx.textio.web.RunnerData;
+
+import org.beryx.textio.TextIO;
+import org.beryx.textio.TextIoFactory;
+import org.beryx.textio.web.SparkTextIoApp;
+import org.beryx.textio.web.TextIoApp;
+import org.beryx.textio.web.WebTextTerminal;
 
 // import org.hibernate.Session;
 // import org.hibernate.SessionFactory;
@@ -13,23 +24,37 @@ import arayuzler.Shell;
 // import org.hibernate.boot.registry.StandardServiceRegistry;
 // import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import modeller.File;
+// import modeller.File;
 // import modeller.HalfCabinet;
-import modeller.Location;
+// import modeller.Location;
 import islemler.*;
 // import java.lang.Object;
+import textio.demo.WebTextIoExecutor;
 
 public class ArsivMain{
     // static SessionFactory factory;
+    TextIO textIO = TextIoFactory.getTextIO();
+    // SparkTextIoApp webApp=new SparkTextIoApp(null, null);
     public static void main (String[] args) {
         // setup();
         // Scanner giris = new Scanner(System.in);
-        Baglanti baglanti=new Baglanti();
-        baglanti.ac();
-        Shell arayuz=new Shell();
-        // arayuz.karsilama();
-        arayuz.kayit(baglanti);
-        // arayuz.yeniKayıt();
+        // Baglanti baglanti=new Baglanti();
+        // baglanti.ac();
+        // Shell arayuz=new Shell();
+        // arayuz.kayit(baglanti);
+
+        TextIO textIo=TextIoFactory().getTextIO();
+        BiConsumer<TextIO,RunnerData>appRunner=new TextIoUiApp();
+        appRunner.accept(textIo,null);
+
+        WebTextTerminal webTextTerm = new WebTextTerminal();
+        TextIoApp<?>textIoApp=new SparkTextIoApp(appRunner, webTextTerm);
+        WebTextIoExecutor webTextIoExecutor = new WebTextIoExecutor();
+        webTextIoExecutor.withPort(8000);
+        webTextIoExecutor.execute(textIoApp);
+        
+        
+        
 
         // File file=new File();
         // Location location=new Location();
@@ -84,7 +109,7 @@ public class ArsivMain{
         //     System.out.println("secim: "+sec);
 
         // factory.close();
-    baglanti.kompleKapat();
+    // baglanti.kompleKapat();
 
     }
     // public static void  setup(){
@@ -93,4 +118,7 @@ public class ArsivMain{
     //         .build();
     //     factory=new MetadataSources(registry).buildMetadata().buildSessionFactory();
     // }
+	private static TextIoFactory TextIoFactory() {
+		return null;
+	}
 }
