@@ -46,11 +46,11 @@ public class ArsivMain{
         BiConsumer<TextIO,RunnerData>appRunner=new TextIoUiApp();
         appRunner.accept(textIo,null);
 
-        WebTextTerminal webTextTerm = new WebTextTerminal();
-        TextIoApp<?>textIoApp=new SparkTextIoApp(appRunner, webTextTerm);
-        WebTextIoExecutor webTextIoExecutor = new WebTextIoExecutor();
-        webTextIoExecutor.withPort(8000);
-        webTextIoExecutor.execute(textIoApp);
+        // WebTextTerminal webTextTerm = new WebTextTerminal();
+        // TextIoApp<?>textIoApp=new SparkTextIoApp(appRunner, webTextTerm);
+        // WebTextIoExecutor webTextIoExecutor = new WebTextIoExecutor();
+        // webTextIoExecutor.withPort(8000);
+        // webTextIoExecutor.execute(textIoApp);
         
         
         
