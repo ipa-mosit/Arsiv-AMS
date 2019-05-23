@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package textio.demo;
+package arayuzler.textio;
 
 import org.beryx.textio.web.TextIoApp;
 

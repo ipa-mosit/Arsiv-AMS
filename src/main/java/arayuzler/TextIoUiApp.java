@@ -7,7 +7,7 @@ import org.beryx.textio.TextIoFactory;
 import org.beryx.textio.TextTerminal;
 import org.beryx.textio.web.RunnerData;
 import islemler.Baglanti;
-import textio.demo.app.AppUtil;
+import arayuzler.textio.AppUtil;
 public class TextIoUiApp implements BiConsumer<TextIO,RunnerData>{
     @Override
     public void accept(TextIO textIO,RunnerData runnerData){

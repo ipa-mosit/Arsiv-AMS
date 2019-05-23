@@ -10,7 +10,6 @@ import arayuzler.TextIoUiApp;
 import java.util.function.BiConsumer;
 // import java.util.function.BiConsumer.*;
 import org.beryx.textio.web.RunnerData;
-
 import org.beryx.textio.TextIO;
 import org.beryx.textio.TextIoFactory;
 import org.beryx.textio.web.SparkTextIoApp;
@@ -29,7 +28,7 @@ import org.beryx.textio.web.WebTextTerminal;
 // import modeller.Location;
 import islemler.*;
 // import java.lang.Object;
-import textio.demo.WebTextIoExecutor;
+import arayuzler.textio.WebTextIoExecutor;
 
 public class ArsivMain{
     // static SessionFactory factory;
