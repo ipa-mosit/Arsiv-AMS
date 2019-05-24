@@ -15,6 +15,7 @@ import org.beryx.textio.TextIoFactory;
 import org.beryx.textio.web.SparkTextIoApp;
 import org.beryx.textio.web.TextIoApp;
 import org.beryx.textio.web.WebTextTerminal;
+import arayuzler.*;
 
 // import org.hibernate.Session;
 // import org.hibernate.SessionFactory;
@@ -26,15 +27,18 @@ import org.beryx.textio.web.WebTextTerminal;
 // import modeller.File;
 // import modeller.HalfCabinet;
 // import modeller.Location;
-import islemler.*;
+// import islemler.*;
 // import java.lang.Object;
-import arayuzler.textio.WebTextIoExecutor;
+// import arayuzler.textio.WebTextIoExecutor;
 
 public class ArsivMain{
     // static SessionFactory factory;
     TextIO textIO = TextIoFactory.getTextIO();
     // SparkTextIoApp webApp=new SparkTextIoApp(null, null);
     public static void main (String[] args) {
+        ShellApp sa=new ShellApp(8000);
+        sa.basla();
+        // ShellApp();
         // setup();
         // Scanner giris = new Scanner(System.in);
         // Baglanti baglanti=new Baglanti();
@@ -42,9 +46,9 @@ public class ArsivMain{
         // Shell arayuz=new Shell();
         // arayuz.kayit(baglanti);
 
-        TextIO textIo=TextIoFactory().getTextIO();
-        BiConsumer<TextIO,RunnerData>appRunner=new TextIoUiApp();
-        appRunner.accept(textIo,null);
+        // TextIO textIo=TextIoFactory().getTextIO();
+        // BiConsumer<TextIO,RunnerData>appRunner=new TextIoUiApp();
+        // appRunner.accept(textIo,null);
 
         // WebTextTerminal webTextTerm = new WebTextTerminal();
         // TextIoApp<?>textIoApp=new SparkTextIoApp(appRunner, webTextTerm);
@@ -117,7 +121,6 @@ public class ArsivMain{
     //         .build();
     //     factory=new MetadataSources(registry).buildMetadata().buildSessionFactory();
     // }
-	private static TextIoFactory TextIoFactory() {
-		return null;
+	private static void ShellApp(int i) {
 	}
 }
