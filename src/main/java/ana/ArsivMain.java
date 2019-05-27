@@ -36,7 +36,7 @@ public class ArsivMain{
     TextIO textIO = TextIoFactory.getTextIO();
     // SparkTextIoApp webApp=new SparkTextIoApp(null, null);
     public static void main (String[] args) {
-        ShellApp sa=new ShellApp(8000);
+        ShellApp sa=new ShellApp();
         sa.basla();
         // ShellApp();
         // setup();
