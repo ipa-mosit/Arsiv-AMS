@@ -87,7 +87,7 @@ public class ShellDialogs  implements BiConsumer<TextIO,RunnerData>{
     }
 
 
-	public Location tekilLokasyonGir (InputReader<Integer,IntInputReader> tamsayiGirisi,CharInputReader karakterGirisi,File file,int defKabin,char defKabinKisim){
+	public Location tekilLokasyonGir (InputReader<Integer,IntInputReader> tamsayiGirisi,CharInputReader karakterGirisi,File file){
 
         List<String>tamsayiHataMesaji=new ArrayList<String>();
         tamsayiHataMesaji.add("Lütfen bir tamsayi giriniz");
